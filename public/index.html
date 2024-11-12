@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat em Tempo Real</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="chat-container">
+    <h2>Selecione uma sala e entre no chat</h2>
+    <input id="username-input" type="text" placeholder="Nome de usuário" />
+    <input id="room-input" type="text" placeholder="Nome da Sala" />
+    <button onclick="joinRoom()">Entrar na Sala</button>
+    <button onclick="leaveRoom()">Sair da Sala</button>
+
+    <div id="messages"></div>
+    <input id="message-input" type="text" placeholder="Escreva sua mensagem" />
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
